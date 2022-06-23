@@ -41,25 +41,9 @@ def print_report(resources):
           f'{resources["coffee"]}g\nMoney: ${resources["money"]}')
 
 
-def check_input(order_input, resources):
-    if order_input == 'off':
-        return False
-    elif order_input == 'report':
-        print_report(resources)
-    elif order_input in list(MENU.keys()):
-        if check_resources(resources, order_input) and money_check(order_input, resources):
-            reduce_res(order_input, resources)
-            print(f'Here is your {order_input}, enjoy!')
-    return True
-
-
-def check_resources(resources, drink):
-    for r in MENU[drink]["ingredients"]:
-        if MENU[drink]["ingredients"][r] > resources[r]:
-            print(f'Sorry there is not enough {r}')
-            return False
-        else:
-            return True
+def reduce_res(drink_type, resources):
+    for res in MENU[drink_type]['ingredients']:
+        resources[res] -= MENU[drink_type]['ingredients'][res]
 
 
 def coin_insert():
@@ -76,7 +60,7 @@ def coin_insert():
     return total
 
 
-def money_check(drink, res):
+def check_money(drink, res):
     total = coin_insert()
     price = MENU[drink]['cost']
     if price > total:
@@ -92,9 +76,25 @@ def money_check(drink, res):
     return True
 
 
-def reduce_res(drink_type, resources):
-    for res in MENU[drink_type]['ingredients']:
-        resources[res] -= MENU[drink_type]['ingredients'][res]
+def check_resources(resources, drink):
+    for r in MENU[drink]["ingredients"]:
+        if MENU[drink]["ingredients"][r] > resources[r]:
+            print(f'Sorry there is not enough {r}')
+            return False
+        else:
+            return True
+
+
+def check_input(order_input, resources):
+    if order_input == 'off':
+        return False
+    elif order_input == 'report':
+        print_report(resources)
+    elif order_input in list(MENU.keys()):
+        if check_resources(resources, order_input) and check_money(order_input, resources):
+            reduce_res(order_input, resources)
+            print(f'Here is your {order_input}, enjoy!')
+    return True
 
 
 def machine_working():
