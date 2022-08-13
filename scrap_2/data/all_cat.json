@@ -1,0 +1,118 @@
+{
+    "Гипсокартон и комплектующие": {
+        "Гипсокартон": "https://astera64.ru/katalog/gipsokarton-i-komplektuyushchie/gipsokarton/",
+        "Комплектующие": "https://astera64.ru/katalog/gipsokarton-i-komplektuyushchie/komplektuyushchie/",
+        "Профиль": "https://astera64.ru/katalog/gipsokarton-i-komplektuyushchie/profil/",
+        "Сетки и серпянки": "https://astera64.ru/katalog/gipsokarton-i-komplektuyushchie/setki-i-serpyanki/",
+        "Угловые профиля": "https://astera64.ru/katalog/gipsokarton-i-komplektuyushchie/uglovye-profilya/"
+    },
+    "ЖБИ": {
+        "Элементы колодцев": "https://astera64.ru/katalog/zhbi/elementy-kolodtsev/"
+    },
+    "Инструмент и Расходники": {
+        "Измерительный инструмент": "https://astera64.ru/katalog/instrument-i-raskhodniki/izmeritelnyy-instrument/",
+        "Инструмент для оштукатуривания": "https://astera64.ru/katalog/instrument-i-raskhodniki/instrument-dlya-oshtukaturivaniya/",
+        "Круги и электроды": "https://astera64.ru/katalog/instrument-i-raskhodniki/krugi-i-elektrody/",
+        "Малярный инструмент": "https://astera64.ru/katalog/instrument-i-raskhodniki/malyarnyy-instrument/",
+        "Расходные материалы": "https://astera64.ru/katalog/instrument-i-raskhodniki/raskhodnye-materialy/",
+        "Ручной инструмент": "https://astera64.ru/katalog/instrument-i-raskhodniki/ruchnoy-instrument/"
+    },
+    "Керамогранит": {
+        "Напольная плитка": "https://astera64.ru/katalog/keramogranit/napolnaya-plitka/"
+    },
+    "Клей": {
+        "Клей «жидкие гвозди»": "https://astera64.ru/katalog/kley/kley-zhidkie-gvozdi/",
+        "Клей для напольных покрытий": "https://astera64.ru/katalog/kley/kley-dlya-napolnykh-pokrytiy/",
+        "Клей для обоев": "https://astera64.ru/katalog/kley/kley-dlya-oboev/",
+        "Клей монтажный": "https://astera64.ru/katalog/kley/kley-montazhnyy/",
+        "Клей плиточный": "https://astera64.ru/katalog/kley/kley-plitochnyy/"
+    },
+    "Краска и грунтовки": {
+        "Грунтовки": "https://astera64.ru/katalog/kraska-i-gruntovki/gruntovki/",
+        "Краска интерьерная": "https://astera64.ru/katalog/kraska-i-gruntovki/kraska-interernaya/",
+        "Краска фасадная": "https://astera64.ru/katalog/kraska-i-gruntovki/kraska-fasadnaya/",
+        "Эмали и грунты": "https://astera64.ru/katalog/kraska-i-gruntovki/emali-i-grunty/"
+    },
+    "Крепеж": {
+        "Анкера": "https://astera64.ru/katalog/krepezh/ankera/",
+        "Дюбеля": "https://astera64.ru/katalog/krepezh/dyubelya/",
+        "Саморезы": "https://astera64.ru/katalog/krepezh/samorezy/"
+    },
+    "Кровельные материалы": {
+        "Битум/Праймер/Мастика": "https://astera64.ru/katalog/krovelnye-materialy/bitum-praymer-mastika/",
+        "Ондулин": "https://astera64.ru/katalog/krovelnye-materialy/ondulin/",
+        "Рулонные материалы": "https://astera64.ru/katalog/krovelnye-materialy/rulonnye-materialy/"
+    },
+    "Листовой материал": {
+        "OSB": "https://astera64.ru/katalog/listovoy-material/osb/",
+        "ДВП": "https://astera64.ru/katalog/listovoy-material/dvp/",
+        "ДСП": "https://astera64.ru/katalog/listovoy-material/dsp/",
+        "Фанера": "https://astera64.ru/katalog/listovoy-material/fanera/",
+        "ЦСП": "https://astera64.ru/katalog/listovoy-material/tssp/"
+    },
+    "Металл, сетка, проволока": {
+        "Кладочная сетка": "https://astera64.ru/katalog/metall-setka-provoloka/kladochnaya-setka/",
+        "Проволока": "https://astera64.ru/katalog/metall-setka-provoloka/provoloka/",
+        "Сетка рабица": "https://astera64.ru/katalog/metall-setka-provoloka/setka-rabitsa/"
+    },
+    "Парковочное оборудование": {
+        "Лежачий полицейский": "https://astera64.ru/katalog/parkovochnoe-oborudovanie/lezhachiy-politseyskiy/",
+        "Парковочные столбики": "https://astera64.ru/katalog/parkovochnoe-oborudovanie/parkovochnye-stolbiki/",
+        "Парковочный барьер": "https://astera64.ru/katalog/parkovochnoe-oborudovanie/parkovochnyy-barer/"
+    },
+    "Потолки": {
+        "Подвесные потолки": "https://astera64.ru/katalog/potolki/podvesnye-potolki/"
+    },
+    "Сетка затеняющая (защитная)": "https://astera64.ru/katalog/setka-zatenyaushyaya-zashitnaya/",
+    "Стеклопластиковая арматура": "https://astera64.ru/katalog/stekloplastikovaya-armatura/",
+    "Стеклохолст, Обои": {
+        "Стеклохолст, Стеклообои": "https://astera64.ru/katalog/steklokholst-oboi/steklokholst-steklooboi/",
+        "Флизелин": "https://astera64.ru/katalog/steklokholst-oboi/Flizelin/"
+    },
+    "Стеновые материалы": {
+        "Блок газосиликатный": "https://astera64.ru/katalog/stenovye-materialy/blok-gazosilikatnyy/",
+        "Кирпич керамический": "https://astera64.ru/katalog/stenovye-materialy/kirpich-keramicheskiy/",
+        "Кирпич силикатный (бутовый)": "https://astera64.ru/katalog/stenovye-materialy/kirpich-silikatnyy-butovyy/",
+        "Кирпич силикатный (лицевой)": "https://astera64.ru/katalog/stenovye-materialy/kirpich-silikatnyy-litsevoy/",
+        "Пазогребневые плиты": "https://astera64.ru/katalog/stenovye-materialy/pazogrebnevye-plity/"
+    },
+    "Строительная химия": {
+        "Герметики": "https://astera64.ru/katalog/stroitelnaya-khimiya/germetiki/",
+        "Пена монтажная": "https://astera64.ru/katalog/stroitelnaya-khimiya/pena-montazhnaya/",
+        "Противогрибковый препарат": "https://astera64.ru/katalog/stroitelnaya-khimiya/protivogribkovyy-preparat/",
+        "Растворители": "https://astera64.ru/katalog/stroitelnaya-khimiya/rastvoriteli/"
+    },
+    "Сухие строительные смеси": {
+        "Гидроизоляция": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/gidroizolyatsiya/",
+        "Добавки в бетон и растворы": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/dobavki-v-beton-i-rastvori/",
+        "Затирка": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/zatirka/",
+        "Известь": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/izvest/",
+        "Кладочные смеси": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/kladochnye-smesi/",
+        "Наливной пол": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/nalivnoy-pol/",
+        "Цемент": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/tsement/",
+        "Шпатлевка": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/shpatlevka/",
+        "Штукатурка цементная (фасадная)": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/fasadnaya-shtukaturka/",
+        "Штукатурки гипсовые": "https://astera64.ru/katalog/sukhie-stroitelnye-smesi/shtukaturki/"
+    },
+    "Утепление фасада и лоджий": {
+        "Декоративная штукатурка": "https://astera64.ru/katalog/uteplenie-fasada-i-lodzhiy/dekorativnaya-shtukaturka/",
+        "Клей для теплоизоляции": "https://astera64.ru/katalog/uteplenie-fasada-i-lodzhiy/kley-dlya-teploizolyatsii/",
+        "Крепеж и комплектующие": "https://astera64.ru/katalog/uteplenie-fasada-i-lodzhiy/krepezh-i-komplektuyushchie/",
+        "Сетки и углы": "https://astera64.ru/katalog/uteplenie-fasada-i-lodzhiy/setki-i-ugly/",
+        "Утеплитель": "https://astera64.ru/katalog/uteplenie-fasada-i-lodzhiy/uteplitel/"
+    },
+    "Утеплители": {
+        "Вспененый полиэтилен": "https://astera64.ru/katalog/utepliteli/vspenenyy-polietilen/",
+        "Минеральная плита": "https://astera64.ru/katalog/utepliteli/mineralnaya-plita/",
+        "Напыляемый утеплитель": "https://astera64.ru/katalog/utepliteli/napylyaemyy-uteplitel/",
+        "Пенополистирол": "https://astera64.ru/katalog/utepliteli/penopolistirol/",
+        "Плёнки изоляционные": "https://astera64.ru/katalog/utepliteli/plyenki-izolyatsionnye/",
+        "Рулоный утеплитель": "https://astera64.ru/katalog/utepliteli/rulonyy-uteplitel/",
+        "Экструдированный пенополистирол": "https://astera64.ru/katalog/utepliteli/ekstrudirovannyy-penopolistirol/"
+    },
+    "Щебень, Песок, Керамзит": {
+        "Керамзит": "https://astera64.ru/katalog/shcheben-pesok-keramzit/keramzit/",
+        "Песок": "https://astera64.ru/katalog/shcheben-pesok-keramzit/pesok/",
+        "Щебень": "https://astera64.ru/katalog/shcheben-pesok-keramzit/shcheben/"
+    }
+}
