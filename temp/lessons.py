@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-with open('my.txt', 'w') as file:
-    file.write('3423423')
+# with open('my.txt', 'w') as file:
+#     file.write('3423423')
 
 # a = {i:i*2 for i in range(1, 4)}
 # print(a)
@@ -51,3 +51,69 @@ with open('my.txt', 'w') as file:
 #
 # book.save('file2.xlsx')
 # book.close()
+
+
+class Initialization:
+    def __init__(self, capacity, food):
+        if type(capacity) is not int:
+            print('Количество людей должно быть целым числом')
+            return None
+        self.capacity = capacity
+        self.food = food
+
+
+class Vegetarian(Initialization):
+    def __init__(self, c, f):
+        super().__init__(c, f)
+
+    def __str__(self):
+        return f'{self.capacity} людей предпочитают не есть мясо! Они предпочитают {self.food}'
+
+
+class MeatEater(Initialization):
+    def __init__(self, c, f):
+        super().__init__(c, f)
+
+    def __str__(self):
+        return f'{self.capacity} мясоедов в Москве! Помимо мяса они едят еще и {self.food}'
+
+
+class SweetTooth(Initialization):
+    def __init__(self, c, f):
+        super().__init__(c, f)
+
+    def __str__(self):
+        return f'Сладкоежек в Москве {self.capacity}. Их самая любимая еда: {self.food}'
+
+    def checker(self, o):
+        if isinstance(o, (int, Vegetarian, MeatEater)):
+            return 'right'
+        else:
+            return f'Невозможно сравнить количество сладкоежек с {o}'
+
+    def __eq__(self, other):
+        if self.checker(other) == 'right':
+            if type(other) is int:
+                return self.capacity == other
+            else:
+                return self.capacity == other.capacity
+        else:
+            return self.checker(other)
+
+    def __lt__(self, other):
+        if self.checker(other) == 'right':
+            if type(other) is int:
+                return self.capacity < other
+            else:
+                return self.capacity < other.capacity
+        else:
+            return self.checker(other)
+
+    def __gt__(self, other):
+        if self.checker(other) == 'right':
+            if type(other) is int:
+                return self.capacity > other
+            else:
+                return self.capacity > other.capacity
+        else:
+            return self.checker(other)
