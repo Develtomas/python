@@ -53,67 +53,109 @@ from collections import defaultdict
 # book.close()
 
 
-class Initialization:
-    def __init__(self, capacity, food):
-        if type(capacity) is not int:
-            print('Количество людей должно быть целым числом')
-            return None
-        self.capacity = capacity
-        self.food = food
+# class Initialization:
+#     def __init__(self, capacity, food):
+#         if type(capacity) is not int:
+#             print('Количество людей должно быть целым числом')
+#             return None
+#         self.capacity = capacity
+#         self.food = food
+#
+#
+# class Vegetarian(Initialization):
+#     def __init__(self, c, f):
+#         super().__init__(c, f)
+#
+#     def __str__(self):
+#         return f'{self.capacity} людей предпочитают не есть мясо! Они предпочитают {self.food}'
+#
+#
+# class MeatEater(Initialization):
+#     def __init__(self, c, f):
+#         super().__init__(c, f)
+#
+#     def __str__(self):
+#         return f'{self.capacity} мясоедов в Москве! Помимо мяса они едят еще и {self.food}'
+#
+#
+# class SweetTooth(Initialization):
+#     def __init__(self, c, f):
+#         super().__init__(c, f)
+#
+#     def __str__(self):
+#         return f'Сладкоежек в Москве {self.capacity}. Их самая любимая еда: {self.food}'
+#
+#     def checker(self, o):
+#         if isinstance(o, (int, Vegetarian, MeatEater)):
+#             return 'right'
+#         else:
+#             return f'Невозможно сравнить количество сладкоежек с {o}'
+#
+#     def __eq__(self, other):
+#         if self.checker(other) == 'right':
+#             if type(other) is int:
+#                 return self.capacity == other
+#             else:
+#                 return self.capacity == other.capacity
+#         else:
+#             return self.checker(other)
+#
+#     def __lt__(self, other):
+#         if self.checker(other) == 'right':
+#             if type(other) is int:
+#                 return self.capacity < other
+#             else:
+#                 return self.capacity < other.capacity
+#         else:
+#             return self.checker(other)
+#
+#     def __gt__(self, other):
+#         if self.checker(other) == 'right':
+#             if type(other) is int:
+#                 return self.capacity > other
+#             else:
+#                 return self.capacity > other.capacity
+#         else:
+#             return self.checker(other)
 
+# class CustomButton:
+#     def __init__(self, t, **kwargs):
+#         self.text = t
+#         for key, val in kwargs.items():
+#             setattr(self, key, val)
+#
+#     def config(self, **kwargs):
+#         for key, val in kwargs.items():
+#             setattr(self, key, val)
+#
+#     def click(self):
+#         try:
+#             self.command()
+#         except AttributeError:
+#             print('Кнопка не настроена')
+#         except TypeError:
+#             print('Кнопка сломалась')
 
-class Vegetarian(Initialization):
-    def __init__(self, c, f):
-        super().__init__(c, f)
+class Customer:
+    def __init__(self, name, balance = 0):
+        self.name = name
+        self.balance = balance
 
-    def __str__(self):
-        return f'{self.capacity} людей предпочитают не есть мясо! Они предпочитают {self.food}'
+    @staticmethod
+    def check_type(val):
+        if not isinstance(val, (int, float)):
+            raise TypeError('Банк работает только с числами')
 
-
-class MeatEater(Initialization):
-    def __init__(self, c, f):
-        super().__init__(c, f)
-
-    def __str__(self):
-        return f'{self.capacity} мясоедов в Москве! Помимо мяса они едят еще и {self.food}'
-
-
-class SweetTooth(Initialization):
-    def __init__(self, c, f):
-        super().__init__(c, f)
-
-    def __str__(self):
-        return f'Сладкоежек в Москве {self.capacity}. Их самая любимая еда: {self.food}'
-
-    def checker(self, o):
-        if isinstance(o, (int, Vegetarian, MeatEater)):
-            return 'right'
+    def withdraw(self, val):
+        Customer.check_type(val)
+        if self.balance >= val:
+            self.balance -= val
         else:
-            return f'Невозможно сравнить количество сладкоежек с {o}'
+            raise ValueError('Сумма списания превышает баланс')
 
-    def __eq__(self, other):
-        if self.checker(other) == 'right':
-            if type(other) is int:
-                return self.capacity == other
-            else:
-                return self.capacity == other.capacity
-        else:
-            return self.checker(other)
+    def deposit(self, add):
+        Customer.check_type(add)
+        self.balance += add
 
-    def __lt__(self, other):
-        if self.checker(other) == 'right':
-            if type(other) is int:
-                return self.capacity < other
-            else:
-                return self.capacity < other.capacity
-        else:
-            return self.checker(other)
 
-    def __gt__(self, other):
-        if self.checker(other) == 'right':
-            if type(other) is int:
-                return self.capacity > other
-            else:
-                return self.capacity > other.capacity
-        else:
-            return self.checker(other)
+
