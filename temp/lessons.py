@@ -136,26 +136,123 @@ from collections import defaultdict
 #         except TypeError:
 #             print('Кнопка сломалась')
 
-class Customer:
-    def __init__(self, name, balance = 0):
-        self.name = name
-        self.balance = balance
+# class Customer:
+#     def __init__(self, name, balance = 0):
+#         self.name = name
+#         self.balance = balance
+#
+#     @staticmethod
+#     def check_type(val):
+#         if not isinstance(val, (int, float)):
+#             raise TypeError('Банк работает только с числами')
+#
+#     def withdraw(self, val):
+#         Customer.check_type(val)
+#         if self.balance >= val:
+#             self.balance -= val
+#         else:
+#             raise ValueError('Сумма списания превышает баланс')
+#
+#     def deposit(self, add):
+#         Customer.check_type(add)
+#         self.balance += add
 
-    @staticmethod
-    def check_type(val):
-        if not isinstance(val, (int, float)):
-            raise TypeError('Банк работает только с числами')
+########################################
+# class ZodiacSign:
+#     def __init__(self):
+#         self.day = int(input('enter the date: '))
+#         self.month_dict = ['Январь', 'Февраль', 'Март', 'Апрель',\
+#                              'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+#         self.month = ''
+#         while self.month not in self.month_dict:
+#             self.month = input('enter correct Month: ').capitalize()
+#
+#         self.month = self.month_dict.index(self.month) + 1
+#         print(f"Your sign is: {self.sign}")
+#
+#     @property
+#     def sign(self):
+#         if(self.day >= 21 and self.day <= 31 and self.month == 3) or (self.month == 4 and self.day >= 1 and self.day <= 19):
+#             sign = "Овен"
+#         elif (self.day >= 20 and self.day <= 30 and self.month == 4) or (self.month == 5 and self.day >= 1 and self.day <= 20):
+#             sign = "Телец"
+#         elif (self.day >= 21 and self.day <= 31 and self.month == 5) or (self.month == 6 and self.day >= 1 and self.day <= 21):
+#             sign = "Близнецы"
+#         elif (self.day >= 22 and self.day <= 30 and self.month == 6) or (self.month == 7 and self.day >= 1 and self.day <= 22):
+#             sign = "Рак"
+#         elif (self.day >= 23 and self.day <= 31 and self.month == 7) or (self.month == 8 and self.day >= 1 and self.day <= 22):
+#             sign = "Лев"
+#         elif (self.day >= 23 and self.day <= 31 and self.month == 8) or (self.month == 9 and self.day >= 1 and self.day <= 22):
+#             sign = "Дева"
+#         elif (self.day >= 23 and self.day <= 30 and self.month == 9) or (self.month == 10 and self.day >= 1 and self.day <= 23):
+#             sign = "Весы"
+#         elif (self.day >= 24 and self.day <= 31 and self.month == 10) or (self.month == 11 and self.day >= 1 and self.day <= 22):
+#             sign = "Скорпион"
+#         elif (self.day >= 23 and self.day <= 30 and self.month == 11) or (self.month == 12 and self.day >= 1 and self.day <= 21):
+#             sign = "Стрелец"
+#         elif (self.day >= 22 and self.day <= 31 and self.month == 12) or (self.month == 1 and self.day >= 1 and self.day <= 20):
+#             sign = "Козерог"
+#         elif (self.day >= 21 and self.day <= 31 and self.month == 1) or (self.month == 2 and self.day >= 1 and self.day <= 18):
+#             sign = "Водолей"
+#         elif (self.day >= 19 and self.day <= 29 and self.month == 2) or (self.month == 3 and self.day >= 1 and self.day <= 20):
+#             sign = "Рыбы"
+#         return sign
+###############################################
 
-    def withdraw(self, val):
-        Customer.check_type(val)
-        if self.balance >= val:
-            self.balance -= val
-        else:
-            raise ValueError('Сумма списания превышает баланс')
 
-    def deposit(self, add):
-        Customer.check_type(add)
-        self.balance += add
-
-
-
+# def package_size_generator(width=15, length=50, height=20):
+#     if length > 200:
+#         print("Упаковка для лыж")
+#     elif width <= 15 and length <= 15 and  height <= 15:
+#         print("Коробка №1")
+#     elif 15 < width <= 50 or\
+#         15 < length <= 50 or\
+#         15 < height <= 50:
+#         print("Коробка №2")
+#     else:
+#         print("Стандартная коробка №3")
+#
+# package_size_generator()
+################################################
+# def check_luck(num):
+#     print("Lucky" if sum(map(int, list(str(num)[0:3]))) == sum(map(int, list(str(num)[3:7]))) else "unlucky")
+####################################################
+# class Triangle:
+#     def __init__(self):
+#         self.f_side = int(input("first side: "))
+#         self.s_side = int(input("second side: "))
+#         self.t_side = int(input("third side: "))
+#
+#     def area(self):
+#         p = float((self.f_side + self.s_side + self.t_side) / 2)
+#         print(f"Area is {(p * (p - self.f_side) * (p - self.s_side) * (p - self.t_side)) ** 0.5}")
+#
+#
+# class Circle:
+#     def __init__(self):
+#         self.radius = int(input("Radius: "))
+#
+#     def area(self):
+#         print(f"Area is {3.14 * (self.radius ** 2)}")
+#
+#
+# class Rectangle:
+#     def __init__(self):
+#         self.f_side = int(input("first side: "))
+#         self.s_side = int(input("second side: "))
+#
+#     def area(self):
+#         print(f"Area is {self.f_side * self.s_side}")
+#
+#
+# def area_calculator():
+#     """Please enter Triangle, Rectangle or Circle"""
+#     try:
+#         shape = eval(input('enter shape: '))()
+#         shape.area()
+#     except NameError:
+#         print('error name')
+#
+#
+# area_calculator()
+##############################
