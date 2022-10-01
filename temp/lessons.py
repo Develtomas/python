@@ -256,3 +256,101 @@ from collections import defaultdict
 #
 # area_calculator()
 ##############################
+# def word_cutter(word):
+#     if len(word) % 2 == 0:
+#         print(word[int(len(word)/2-1):int(len(word)/2+1)])
+#     else:
+#         print(word[int((len(word)-1)/2)])
+#
+# word_cutter('abba')
+################################
+# def sum_digits():
+#     arr = []
+#     while True:
+#         digit = int(input('enter the number: '))
+#         if digit:
+#             arr.append(digit)
+#         else:
+#             print(f'total sum: {sum(arr)}')
+#             break
+#
+#
+# sum_digits()
+#################################################
+# class Dating:
+#     def __init__(self, boys, girls):
+#         self.boys = boys
+#         self.girls = girls
+#         self.county_check()
+#
+#     def county_check(self):
+#         if len(self.boys) != len(self.girls):
+#             raise Exception('Внимание, кто-то может остаться без пары!')
+#         else:
+#             self.mating()
+#
+#     def mating(self):
+#         mates = list(zip(sorted(self.boys), sorted(self.girls)))
+#         print('Ideal')
+#         for pair in mates:
+#             print(f'{pair[0]} : {pair[1]}')
+#
+#
+# boys = ['Peter', 'Alex', 'John', 'Arthur', 'Richard']
+# girls = ['Kate', 'Liza', 'Kira', 'Emma']
+# Dating(boys, girls)
+##############################################
+# def average_temperature(countries):
+#     def temperature_mid(t_list):
+#         return round((sum(t_list)/len(t_list) - 32) * 5 / 9, 1)
+#     print('Average temp in countries:')
+#     for country in countries:
+#         print(f'{country[0]} - {temperature_mid(country[1])} C')
+#
+#
+# countries_temperature = [
+# ['Thailand', [75.2, 77, 78.8, 73.4, 68, 75.2, 77]],
+# ['Germany', [57.2, 55.4, 59, 59, 53.6]],
+# ['Russia', [35.6, 37.4, 39.2, 41, 42.8, 39.2, 35.6]],
+# ['Poland', [50, 50, 53.6, 57.2, 55.4, 55.4]]
+# ]
+# average_temperature(countries_temperature)
+###########################################
+# def counter(user_dict):
+#     print(f'Average view count: {round(sum(list(user_dict.values()))/len(user_dict), 2)}')
+#
+#
+# def modify(stream):
+#     user_dict = {}
+#     for line in stream:
+#         row = line.split(',')
+#         if row[1] in user_dict.keys():
+#             user_dict[row[1]] += int(row[2])
+#         else:
+#             user_dict[row[1]] = int(row[2])
+#     return counter(user_dict)
+#
+#
+# stream = [
+# '2018-01-01,user100,150',
+# '2018-01-07,user99,205',
+# '2018-03-29,user1001,81'
+# ]
+# modify(stream)
+####################################################
+# def unique_digits():
+#     digits_str = input('Enter digits with space separator: ')
+#     digits_list = sorted(digits_str.split(' '))
+#     digits_set = set()
+#     not_unique = set()
+#     for x in digits_list:
+#         if x in digits_set:
+#             not_unique.add(x)
+#         else:
+#             digits_set.add(x)
+#
+#     print(*sorted(list(not_unique)), sep='')
+#
+# unique_digits()
+################################################
+
