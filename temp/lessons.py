@@ -1,5 +1,5 @@
-from collections import defaultdict
-
+import re
+# from collections import defaultdict
 # with open('my.txt', 'w') as file:
 #     file.write('3423423')
 
@@ -353,4 +353,182 @@ from collections import defaultdict
 #
 # unique_digits()
 ################################################
-
+# class Bureau:
+#     def __init__(self):
+#         self.documents = [
+# {'type': 'passport', 'number': '2207 876234', 'name': 'Василий Гупкин'},
+# {'type': 'invoice', 'number': '11-2', 'name': 'Геннадий Покемонов'},
+# {'type': 'insurance', 'number': '10006', 'name': 'Аристарх Павлов'}
+# ]
+#         self.directories = {
+# '1': ['2207 876234', '11-2'],
+# '2': ['10006'],
+# '3': []
+# }
+#         self.bureau_action()
+#
+#     def bureau_action(self):
+#         """All actions with bureau"""
+#         while True:
+#             action_code = input('Type the command: ')
+#             if action_code == 'p':
+#                 self.p_command()
+#             elif action_code == 's':
+#                 self.s_command()
+#             elif action_code == 'l':
+#                 self.l_command()
+#             elif action_code == 'ads':
+#                 self.ads_command()
+#             elif action_code == 'ds':
+#                 self.ds_command()
+#             elif action_code == 'ad':
+#                 self.ad_command()
+#             elif action_code == 'd':
+#                 self.d_command()
+#             elif action_code == 'm':
+#                 self.m_command()
+#             elif action_code == 'q':
+#                 break
+#             else:
+#                 print('No such code...')
+#             print('_'*40)
+#
+#     def check_correct_num(self, num):
+#         """Validation of document number"""
+#         for doc in self.documents:
+#             if doc['number'] == num:
+#                 return True
+#         return False
+#
+#     def check_shelf_exists(self, code):
+#         """Check shelf code in directories"""
+#         if code in self.directories.keys():
+#             return True
+#         return False
+#
+#     def get_all_shelves(self):
+#         return self.directories.keys()
+#
+#     def p_command(self):
+#         """Find document owner"""
+#         doc_num = input('Enter document number: ')
+#         if not self.check_correct_num(doc_num):
+#             print('No such document in the base')
+#             return
+#         for doc in self.documents:
+#             if doc['number'] == doc_num:
+#                 print(f'Owner: {doc["name"]}')
+#
+#     def s_command(self):
+#         """Find document shelf"""
+#         doc_num = input('Enter document number: ')
+#         if not self.check_correct_num(doc_num):
+#             print('No such document in the base')
+#             return
+#         for k, v in self.directories.items():
+#             if doc_num in v:
+#                 print(f'Found on the shelf: {k}')
+#                 break
+#
+#     def l_command(self):
+#         """All information"""
+#         for k, v in self.directories.items():
+#             for val in v:
+#                 if not val:
+#                     continue
+#                 for doc in self.documents:
+#                     if doc['number'] == val:
+#                         print(f'#{val}, type: {doc["type"]}, owner: {doc["name"]}, shelf: {k}')
+#
+#     def ads_command(self):
+#         """Create new shelf"""
+#         new_shelf = input('Enter shelf number: ')
+#         if self.check_shelf_exists(new_shelf):
+#             print(f'Shelf already exists. Shelf list: ', *self.get_all_shelves())
+#         else:
+#             self.directories.setdefault(new_shelf, [])
+#             print(f'Shelf added. Shelf list: ', *self.get_all_shelves())
+#
+#     def ds_command(self):
+#         """Delete an empty shelf"""
+#         del_shelf = input('Enter shelf number: ')
+#         if not self.check_shelf_exists(del_shelf):
+#             print(f'No such shelf. Shelf list: ', *self.get_all_shelves())
+#             return
+#         if self.directories[del_shelf]:
+#             print('There are documents on the shelf. Remove them before. Shelf list: ', *self.get_all_shelves())
+#         else:
+#             del self.directories[del_shelf]
+#             print('Shelf removed. Shelf list: ', *self.get_all_shelves())
+#
+#     def ad_command(self):
+#         """Add new document"""
+#         strings = [('Enter document number: ', 'number'), ('Enter document type: ', 'type'),
+#             ('Enter owner: ', 'name'), ('Enter shelf: ', 'shelf')]
+#         document = {}
+#         doc_num = None
+#         for item in strings:
+#             inp = input(item[0])
+#             if item[1] == 'shelf':
+#                 if not self.check_shelf_exists(inp):
+#                     print('No such shelf. Add shelf with "ads" command')
+#                     return
+#                 else:
+#                     self.directories[inp].append(doc_num)
+#             else:
+#                 if item[1] == 'number':
+#                     doc_num = inp
+#                 document[item[1]] = inp
+#         self.documents.append(document)
+#         print('Document has been added.')
+#         # all documents call
+#         self.l_command()
+#
+#     def d_command(self):
+#         """Delete document"""
+#         inp = input('Enter document number: ')
+#         if not self.check_correct_num(inp):
+#             print('No such document in base')
+#             # all documents call
+#             self.l_command()
+#         else:
+#             document = {}
+#             for element in range(0, len(self.documents)):
+#                 if self.documents[element]['number'] == inp:
+#                     document = self.documents[element]
+#                     break
+#             self.documents.remove(document)
+#
+#             for value in self.directories.values():
+#                 if inp in value:
+#                     value.remove(inp)
+#                     break
+#             print('Document has been removed')
+#             # all documents call
+#             self.l_command()
+#
+#     def m_command(self):
+#         """Move document to the other shelf"""
+#         document = input('Enter document number: ')
+#         shelf = input('Enter shelf: ')
+#         if not self.check_correct_num(document):
+#             print('No such document. All documents: ')
+#             # all documents call
+#             self.l_command()
+#             return
+#         if not self.check_shelf_exists(shelf):
+#             print('No such shelf. Shelf list: ', *self.get_all_shelves())
+#             return
+#
+#         for value in self.directories.values():
+#             if document in value:
+#                 value.remove(document)
+#                 break
+#
+#         self.directories[shelf].append(document)
+#         print('Document was moved to correct shelf. All documents: ')
+#         # all documents call
+#         self.l_command()
+#
+# buro = Bureau()
+#################################
