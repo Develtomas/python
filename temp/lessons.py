@@ -1,4 +1,5 @@
-import re
+#import re
+#from datetime import datetime, timedelta
 # from collections import defaultdict
 # with open('my.txt', 'w') as file:
 #     file.write('3423423')
@@ -532,3 +533,34 @@ import re
 #
 # buro = Bureau()
 #################################
+# def roi(dict):
+#   for value in dict.values():
+#     value.setdefault('ROI', round((int(value['revenue'])/(int(value['cost'])-1) * 100), 2))
+#   return dict
+# results = {
+# 'vk': {'revenue': 103, 'cost': 98},
+# 'yandex': {'revenue': 179, 'cost': 153},
+# 'facebook': {'revenue': 103, 'cost': 110},
+# 'adwords': {'revenue': 35, 'cost': 34},
+# 'twitter': {'revenue': 11, 'cost': 24},
+# }
+# roi(results)
+##################################
+# def date_range(start, end):
+#   """enter dates in YYYY-MM-DD format"""
+#   try:
+#     start_date = datetime.strptime(start, '%Y-%m-%d')
+#     end_date = datetime.strptime(end, '%Y-%m-%d')
+#     print(start_date, end_date)
+#   except ValueError:
+#     return []
+#   if start_date > end_date:
+#     return []
+#   date_list = []
+#   cur_time = start_date
+#   while cur_time <= end_date:
+#     date_list.append(cur_time.strftime('%Y-%m-%d'))
+#     cur_time += timedelta(days=1)
+#   return date_list
+# date_range('2008-06-01', '2008-06-22')
+###########################################
