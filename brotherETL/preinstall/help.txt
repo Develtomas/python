@@ -8,5 +8,6 @@ py -m pip --version
 py -m pip install pandas
 5) поставить openpyxl
 py -m pip install openpyxl
+6)запустить path_finder.py посметреть путь куда закинуть папку
 
 --или запустить pack_inst.bat

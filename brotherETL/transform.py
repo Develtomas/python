@@ -18,7 +18,7 @@ class Transform():
     @staticmethod
     def date_column_transform(df):
         """datetime -> date format, rename columns"""
-        df["date"] = pd.to_datetime(df[1]).dt.date
+        df["date"] = pd.to_datetime(df[1], format='%d.%m.%Y %H:%M:%S').dt.date
         df = df.drop([1], axis='columns')
         df.rename(columns = {4: 'location', 5: 'name', 6: 'price'}, inplace = True)
         return df
