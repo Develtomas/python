@@ -1,0 +1,12 @@
+1) проверить питон
+py --version
+2) проверить pip
+py -m pip --version
+3) если нет, то поставить
+инфо отсюда брать https://packaging.python.org/en/latest/tutorials/installing-packages/
+4) поставить pandas
+py -m pip install pandas
+5) поставить openpyxl
+py -m pip install openpyxl
+
+--или запустить pack_inst.bat
