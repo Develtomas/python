@@ -38,7 +38,7 @@
 # sh['E1'] = 'ACTORS'
 #
 #
-# with open('db.json') as db_file:
+# with open('database.json') as db_file:
 #     data = json.load(db_file)
 #
 # ROW = 2
