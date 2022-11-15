@@ -133,4 +133,5 @@ dmypy.json
 config.py
 load.xlsx
 mapping_dc.xlsx
+database.sqlite
 
