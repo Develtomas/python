@@ -564,3 +564,33 @@
 #   return date_list
 # date_range('2008-06-01', '2008-06-22')
 ###########################################
+
+# merge
+def m_merge(a, b):
+  all = []
+  i=j=0
+  while i < len(a) and j < len(b):
+    if a[i] < b[j]:
+      all.append(a[i])
+      i+=1
+    else:
+      all.append(b[j])
+      j+=1
+  if i < len(a):
+    all += a[i:]
+  if j < len(b):
+    all += b[j:]
+
+  return all
+
+def m_sort(c):
+  if len(c) == 1:
+    return c
+  midd = len(c)//2
+  left = m_sort(c[:midd])
+  right = m_sort(c[midd:])
+  return m_merge(left, right)
+
+
+print(m_sort([1,3,2,6,9,1,0,5,3]))
+
